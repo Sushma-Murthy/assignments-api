@@ -14,8 +14,7 @@ app.use(cors())
 app.options('*', cors())
 
 app.use('/api/v1/', v1AssignmentRoutes)
-
-app.use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument.default))
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument.default))
 
 app.listen(PORT, () => {
     console.log(`Application started and listening on port ${PORT}`)

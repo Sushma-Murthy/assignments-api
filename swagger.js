@@ -13,7 +13,7 @@ export default {
         },
     },
     host: 'localhost:8080',
-    basePath: '/api',
+    basePath: '/api/v1/',
     schemes: ['http'],
     paths: {
         '/assignments': {
@@ -47,7 +47,13 @@ export default {
                         },
                     },
                     422: {
-                        description: 'Invalid status',
+                        description: 'Validation error',
+                        schema: {
+                            $ref: '#/definitions/InvalidResponse',
+                        },
+                    },
+                    500: {
+                        description: 'Generic error',
                         schema: {
                             $ref: '#/definitions/InvalidResponse',
                         },
@@ -60,11 +66,11 @@ export default {
         Assignment: {
             type: 'object',
             properties: {
-                name: { type: 'string' },
-                title: { type: 'string' },
-                description: { type: 'string' },
-                type: { type: 'string' },
-                duration: { type: 'number' },
+                name: { type: 'string', required: true },
+                title: { type: 'string', required: true },
+                description: { type: 'string', required: true },
+                type: { type: 'string', required: true },
+                duration: { type: 'number', required: true },
                 tags: { type: 'string' },
             },
         },
@@ -77,7 +83,7 @@ export default {
         InvalidResponse: {
             type: 'object',
             properties: {
-                message: { type: 'array' },
+                message: { type: 'string' },
                 name: { type: 'string' },
                 status: { type: 'number' },
             },
