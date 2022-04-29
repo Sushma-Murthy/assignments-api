@@ -1,82 +1,38 @@
 [
     {
-        "id": "id-eng1tg1ru8l2hz2u6s",
-        "name": "assignment1",
-        "title": "Learn so and so",
-        "description": "assignment description",
-        "type": "written",
-        "duration": 10
-    },
-    {
         "id": "id-eng1tg1y35l2i0jj5m",
-        "name": "assignment2",
-        "title": "Learn so and so",
-        "description": "assignment description",
-        "type": "online",
-        "duration": 10,
+        "name": "Lab experiment 1",
+        "title": "prism lab experiment",
+        "description": "prism lab experiment",
+        "type": "offline",
+        "duration": 1,
         "tags": ["science"]
     },
     {
         "id": "id-eng1tg1y8al2i0k3b9",
-        "name": "assignment3",
-        "title": "Learn so and so",
-        "description": "assignment description",
-        "type": "offline",
+        "name": "Worksheet 1",
+        "title": "Complete worksheet 1",
+        "description": "Complete worksheet 1",
+        "type": "online",
         "duration": 10,
-        "tags": ["science", "social"]
+        "tags": ["english", "social"]
     },
     {
         "id": "id-eng1tg1yasl2i0kin6",
-        "name": "assignment4",
-        "title": "Learn so and so",
-        "description": "assignment description",
+        "name": "Shapes",
+        "title": "Geometric shapes and area",
+        "description": "Geometric shapes and area",
         "type": "written",
-        "duration": 10,
+        "duration": 5,
         "tags": ["maths"]
     },
     {
         "id": "id-eng1tg1ycwl2i0kye0",
-        "name": "assignment5",
-        "title": "Learn so and so",
-        "description": "assignment description",
-        "type": "oral",
-        "duration": 10,
-        "tags": ["eng"]
-    },
-    {
-        "id": "id-eng1tg1yewl2i0ljqe",
-        "name": "assignment6",
-        "title": "Learn so and so",
-        "description": "assignment description",
-        "type": "written",
-        "duration": 10,
-        "tags": ["maths"]
-    },
-    {
-        "id": "id-eng1tgbxgl2jh7p6g",
-        "name": "assignment9",
-        "title": "Learn so and so",
-        "description": "assignment description",
-        "type": "written",
-        "duration": 10,
-        "tags": ["grammer"]
-    },
-    {
-        "id": "id-eng1tgtdfl2k3d378",
-        "name": "assignment 1",
-        "title": "assignment title",
-        "description": "assignment description",
-        "type": "assignment type",
-        "duration": 10,
-        "tags": ["tag1", "tag2"]
-    },
-    {
-        "id": "id-eng1tg8wul2kj3ar0",
-        "name": "assignment 1-swagger",
-        "title": "string",
-        "description": "string",
-        "type": "string",
-        "duration": 10,
-        "tags": ["swagger1", " swagger2"]
+        "name": "presentation",
+        "title": "create a powerpoint presentation",
+        "description": "create a powerpoint presentation",
+        "type": "online",
+        "duration": 3,
+        "tags": ["cs"]
     }
 ]

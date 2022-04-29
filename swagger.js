@@ -12,7 +12,7 @@ export default {
             url: 'https://opensource.org/licenses/MIT',
         },
     },
-    host: 'localhost:3000',
+    host: 'localhost:8080',
     basePath: '/api',
     schemes: ['http'],
     paths: {
