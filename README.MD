@@ -109,3 +109,4 @@ Note: Run the above scripts before commit
 * Fix lint errors - If any
 * Add precommit hook
 * Add more unit test cases and improve code coverage
+* Use logging framework such as Winston, in place of console logs
