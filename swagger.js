@@ -60,6 +60,50 @@ export default {
                     },
                 },
             },
+            get: {
+                summary: 'Get assignments',
+                description: 'Get assignments by query string',
+                produces: ['application/json'],
+                parameters: [
+                    {
+                        in: 'query',
+                        name: 'id',
+                        required: true,
+                        schema: {
+                            type: 'string',
+                        },
+                        description:
+                            'assignment id to fetch assignment details specific to id',
+                    },
+                    {
+                        in: 'query',
+                        name: 'tags',
+                        optional: true,
+                        schema: {
+                            type: 'string',
+                        },
+                        description:
+                            'comma seperated strings to fetch assignments based on tags, can also be used in combination with Id',
+                    },
+                ],
+                responses: {
+                    200: {
+                        description: 'successful operation',
+                        schema: {
+                            type: 'array',
+                            items: {
+                                $ref: '#/definitions/GetAssignments',
+                            },
+                        },
+                    },
+                    400: {
+                        description: 'Valiodation error',
+                        schema: {
+                            $ref: '#/definitions/InvalidResponse',
+                        },
+                    },
+                },
+            },
         },
     },
     definitions: {
@@ -78,6 +122,24 @@ export default {
             type: 'object',
             properties: {
                 message: { type: 'string' },
+            },
+        },
+        GetAssignments: {
+            items: {
+                type: 'object',
+                properties: {
+                    name: { type: 'string' },
+                    title: { type: 'string' },
+                    description: { type: 'string' },
+                    type: { type: 'string' },
+                    duration: { type: 'number' },
+                    tags: {
+                        type: 'array',
+                        item: {
+                            type: 'string',
+                        },
+                    },
+                },
             },
         },
         InvalidResponse: {
