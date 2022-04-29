@@ -42,7 +42,9 @@ Sample Request
 
 Sample Response
 `
-
+{
+  message: `Assignment created, referenceId: ${referenceId}`,
+}
 `
 
 * **Get Assignments**
