@@ -18,7 +18,7 @@ describe.only('assignment api routes', () => {
 
     it('create new assignment', async () => {
         const res = await request(app)
-            .post('/api/assignments')
+            .post('/api/v1/assignments')
             .send({
                 assignment: {
                     id: 'id-customId',
@@ -40,7 +40,7 @@ describe.only('assignment api routes', () => {
 
     it('create new assignment with invalid data', async () => {
         const res = await request(app)
-            .post('/api/assignments')
+            .post('/api/v1/assignments')
             .send({
                 assignment: {
                     description: 'assignment description',
@@ -59,7 +59,7 @@ describe.only('assignment api routes', () => {
     })
 
     it('get assignments filter by Id', async () => {
-        const res = await request(app).get('/api/assignments?id=id-customId')
+        const res = await request(app).get('/api/v1/assignments?id=id-customId')
         expect(res.header['content-type']).toBe(
             'application/json; charset=utf-8'
         )
@@ -78,7 +78,7 @@ describe.only('assignment api routes', () => {
     })
 
     it('get assignments filter by tags', async () => {
-        const res = await request(app).get('/api/assignments?tags=customtag')
+        const res = await request(app).get('/api/v1/assignments?tags=customtag')
         expect(res.header['content-type']).toBe(
             'application/json; charset=utf-8'
         )
@@ -97,7 +97,7 @@ describe.only('assignment api routes', () => {
     })
 
     it('get assignments with no filters', async () => {
-        const res = await request(app).get('/api/assignments')
+        const res = await request(app).get('/api/v1/assignments')
         expect(res.header['content-type']).toBe(
             'application/json; charset=utf-8'
         )

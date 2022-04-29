@@ -19,7 +19,7 @@ ES6, Node.Js
 `docker run -p 8080:8080 -d <your username>/assignments-api`
 
 ## Rest Api
-Refer to swagger api docs for details - `http://localhost:8080/api-docs`
+Refer to swagger api docs for details - `http://localhost:8080/v1/api-docs`
 
 ## Reference for developers/contributors
 Code Linting: ESLint is enabled to verify the code quality and align with ECMASript6/Node standards.

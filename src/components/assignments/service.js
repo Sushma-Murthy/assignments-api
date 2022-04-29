@@ -7,10 +7,10 @@ import Assignment from './model.js'
 
 const dataFilePath = process.env.DATA_FILE_PATH || '/data.json'
 
-console.log('data file path', dataFilePath)
+console.log(`data file path: ${dataFilePath}`)
+
 async function loadAssignments() {
     try {
-        // check if file exists - no return []
         const assignments = await fs.readFile(
             path.join(process.cwd(), dataFilePath)
         )
@@ -22,11 +22,14 @@ async function loadAssignments() {
 }
 
 async function saveAssignments(assignments) {
-    //TODO try catch
-    await fs.writeFile(
-        path.join(process.cwd(), dataFilePath),
-        JSON.stringify(assignments)
-    )
+    try {
+        await fs.writeFile(
+            path.join(process.cwd(), dataFilePath),
+            JSON.stringify(assignments)
+        )
+    } catch (e) {
+        throw new GenericError(e)
+    }
 }
 
 export async function createAssignment(newAssignment) {
@@ -37,7 +40,7 @@ export async function createAssignment(newAssignment) {
         await saveAssignments(assignments)
         return newAssignment.id
     } catch (e) {
-        throw new GenericError(e)
+        throw e
     }
 }
 

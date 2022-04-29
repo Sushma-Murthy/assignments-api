@@ -22,6 +22,9 @@ function createAssignmentValidator(req, res, next) {
     try {
         if (validate(data)) {
             res.locals.filteredData = structureReqData(data)
+            console.log(
+                `Assignment data validation is successfull, ${req.body}`
+            )
             next()
         }
     } catch (e) {
@@ -49,6 +52,8 @@ function fetchAssignmentsValidator(req, res, next) {
         })
     }
     res.locals.filters = structureReqData(req.query)
+    console.log(`Assignment query validation is successfull, ${req.query}`)
+
     next()
 }
 
