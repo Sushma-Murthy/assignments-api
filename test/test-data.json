@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "id": "id-customId",
+        "name": "assignment 123",
+        "title": "assignment title",
+        "description": "assignment description",
+        "type": "assignment type",
+        "duration": 3,
+        "tags": ["customtag"]
+    }
+]

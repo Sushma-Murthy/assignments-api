@@ -2,11 +2,11 @@ import fs from 'fs'
 import path from 'path'
 import request from 'supertest'
 import express from 'express'
-import router from '../src/routes/assignments.routes'
+import router from '../src/routes/v1/assignments.routes'
 
 const app = new express()
 app.use(express.json())
-app.use('/', router)
+app.use('/api/v1/', router)
 
 describe.only('assignment api routes', () => {
     beforeAll(() => {
@@ -105,7 +105,7 @@ describe.only('assignment api routes', () => {
     })
 
     it('get assignments with incorrect filters', async () => {
-        const res = await request(app).get('/api/assignments?type=online')
+        const res = await request(app).get('/api/v1/assignments?type=online')
         expect(res.header['content-type']).toBe(
             'application/json; charset=utf-8'
         )

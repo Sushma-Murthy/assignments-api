@@ -5,7 +5,8 @@ import { acceptedQuery } from '../components/validator.js'
 
 export default function requestValidator(req, res, next) {
     const parsedUrl = url.parse(req.url, true)
-    if (parsedUrl.pathname === '/api/assignments') {
+    console.log(parsedUrl)
+    if (parsedUrl.pathname === '/assignments') {
         switch (req.method) {
             case 'POST':
                 createAssignmentValidator(req, res, next)
