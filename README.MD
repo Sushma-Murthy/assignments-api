@@ -42,5 +42,6 @@ npm run test
 Note: Run the above scripts before commit
 
 ## Future Enhancements/TODOs
+* Fix lint errors - If any
 * Add precommit hook
 * Add more unit test cases and improve code coverage
